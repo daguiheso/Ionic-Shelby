@@ -22,3 +22,25 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider){
+  $stateProvider
+    // setup an abstract state for the tabs directive
+    .state('tab', {
+      url: '/tab',
+      abstract: true,
+      templateUrl: 'templates/tab.html'
+    })
+    // each tab has its own nav history stack
+    // hereda la plantilla tab => tab.home
+    .state('tab.home', {
+      url: '/home',
+      views: {
+        'tab-home': {
+          templateUrl: 'templates/home.html'
+        }
+      }
+    })
+
+    $urlRouterProvider.otherwise('/tab/home');
+})
