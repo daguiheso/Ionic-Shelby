@@ -37,7 +37,8 @@ angular.module('starter', ['ionic'])
       url: '/home',
       views: {
         'tab-home': {
-          templateUrl: 'templates/home.html'
+          templateUrl: 'templates/home.html',
+          controller: 'HomeCtrl'
         }
       }
     })
@@ -45,7 +46,8 @@ angular.module('starter', ['ionic'])
       url: '/coche',
       views: {
         'tab-coche': {
-          templateUrl: 'templates/coche.html'
+          templateUrl: 'templates/coche.html',
+          controller: 'CocheCtrl'
         }
       }
     })
@@ -53,7 +55,8 @@ angular.module('starter', ['ionic'])
       url: '/comunidad',
       views: {
         'tab-comunidad': {
-          templateUrl: 'templates/comunidad.html'
+          templateUrl: 'templates/comunidad.html',
+          controller: 'ComunidadCtrl'
         }
       }
     })
@@ -61,7 +64,8 @@ angular.module('starter', ['ionic'])
       url: '/datos',
       views: {
         'tab-datos': {
-          templateUrl: 'templates/datos.html'
+          templateUrl: 'templates/datos.html',
+          controller: 'DatosCtrl'
         }
       }
     })
@@ -75,4 +79,17 @@ angular.module('starter', ['ionic'])
     })
 
     $urlRouterProvider.otherwise('/tab/home');
+})
+
+.controller('HomeCtrl', function($scope) {
+  console.log('Entrando en la home');
+})
+.controller('CocheCtrl', function($scope) {
+  console.log('Entrando en Coche');
+})
+.controller('ComunidadCtrl', function($scope) {
+  console.log('Entrando en Comunidad');
+})
+.controller('DatosCtrl', function($scope) {
+  console.log('Entrando en datos');
 })
