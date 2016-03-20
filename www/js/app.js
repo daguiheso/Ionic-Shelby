@@ -69,7 +69,7 @@ angular.module('starter', ['ionic'])
       url: '/info',
       views: {
         'info': {
-          tamplateUrl: 'templates/info.html'
+          templateUrl: 'templates/info.html'
         }
       }
     })
