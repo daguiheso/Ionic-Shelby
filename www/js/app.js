@@ -87,7 +87,8 @@ angular.module('starter', ['ionic'])
 .controller('CocheCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
   $http.get('js/data.json')
     .success(function(data){
-      console.log(data);
+      $scope.detalles = data.detalles;
+      console.log(data.detalles);
     });
 }])
 .controller('ComunidadCtrl', function($scope) {
