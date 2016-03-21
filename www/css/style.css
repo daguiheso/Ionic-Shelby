@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+
+.desplegado {
+	background-color: #fdf2d1 !important;
+}
+.desplegado .item-content {
+	background: transparent;
+}
