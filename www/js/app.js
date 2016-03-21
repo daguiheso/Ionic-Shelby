@@ -88,7 +88,9 @@ angular.module('starter', ['ionic'])
   $http.get('js/data.json')
     .success(function(data){
       $scope.detalles = data.detalles;
-      console.log(data.detalles);
+      $scope.data = {
+        showReorder: false
+      }
     });
 
   $scope.toggleDescripcion = function(item) {
