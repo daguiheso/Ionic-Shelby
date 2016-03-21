@@ -9,7 +9,7 @@
 				<h3>{{item.titulo}}</h3>
 				<p ng-show="!item.resumido">{{item.descripcion | limitTo:92}} {{item.descripcion.length > 92 ? '&hellip;' : ''}}</p>
 				<p ng-show="item.resumido">{{item.descripcion}}</p>
-				<ion-reorder-button class="ion-navicon">
+				<ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)">
 
 				</ion-reorder-button>
 			</ion-item>

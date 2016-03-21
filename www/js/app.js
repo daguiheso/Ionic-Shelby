@@ -96,6 +96,11 @@ angular.module('starter', ['ionic'])
   $scope.toggleDescripcion = function(item) {
     item.resumido = !item.resumido;
   }
+
+  $scope.moveItem = function(item, fromIndex, toIndex) {
+    $scope.detalles.splice(fromIndex, 1);
+    $scope.detalles.splice(toIndex, 0, item);
+  }
 }])
 .controller('ComunidadCtrl', function($scope) {
   console.log('Entrando en Comunidad');
