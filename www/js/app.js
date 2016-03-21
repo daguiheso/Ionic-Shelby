@@ -90,6 +90,10 @@ angular.module('starter', ['ionic'])
       $scope.detalles = data.detalles;
       console.log(data.detalles);
     });
+
+  $scope.toggleDescripcion = function(item) {
+    item.resumido = !item.resumido;
+  }
 }])
 .controller('ComunidadCtrl', function($scope) {
   console.log('Entrando en Comunidad');
