@@ -1,11 +1,11 @@
 <ion-view view-title="Comunidad">
 	<ion-content class="">
 		<ion-list>
-			<ion-item class="item-avatar item-icon-right">
-				<img src="img/users/foto1.jpg" alt="">
-				<h2>Nombre</h2>
-				<p>02294956</p>
-				<a class="button button-icon icon ion-ios-telephone" href=""></a>
+			<ion-item class="item-avatar item-icon-right" ng-repeat="item in usuarios">
+				<img src="img/users/{{item.foto}}" alt="">
+				<h2>{{item.nombre}} {{item.apellidos}}</h2>
+				<p>{{item.telefono}}</p>
+				<a class="button button-icon icon ion-ios-telephone" href="tel:{{item.telefono}}"></a>
 			</ion-item>
 		</ion-list>
 	</ion-content>

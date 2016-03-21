@@ -102,9 +102,12 @@ angular.module('starter', ['ionic'])
     $scope.detalles.splice(toIndex, 0, item);
   }
 }])
-.controller('ComunidadCtrl', function($scope) {
-  console.log('Entrando en Comunidad');
-})
+.controller('ComunidadCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
+  $http.get('js/data.json')
+    .success(function(data){
+      $scope.usuarios = data.usuarios;
+    });
+}])
 .controller('DatosCtrl', function($scope) {
   console.log('Entrando en datos');
 })
