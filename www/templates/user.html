@@ -1,5 +1,13 @@
 <ion-view view-title="Datos de usuario">
 	<ion-content class="padding">
-		<h2>{{data.nombre}}</h2>
+		<div class="mi_contenedor">
+			<div class="img_rounded">
+				<img src="img/users/{{data.foto}}" alt="">
+			</div>
+			<h2>{{data.nombre}} {{data.apellidos}}</h2>
+			<p class="rotulo">Edad : <span class="valor">{{data.edad}}</span></p>
+			<p class="rotulo">Telefono : <span class="valor">{{data.telefono}}</span></p>
+			<p class="rotulo">Años con el coche : <span class="valor">{{data.uso}}</span></p>
+		</div>
 	</ion-content>
 </ion-view>
