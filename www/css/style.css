@@ -7,6 +7,11 @@
 	background: transparent;
 }
 
+
+ion-content.inactivo {
+	opacity: 0.4;
+	background-color: #fdf2d1;
+}
 .mi_contenedor {
 	width: 90%;
 	margin: 0 auto;
