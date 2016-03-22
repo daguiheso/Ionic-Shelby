@@ -124,5 +124,10 @@ angular.module('starter', ['ionic'])
     });
 }])
 .controller('DatosCtrl', function($scope) {
-  console.log('Entrando en datos');
+  $scope.getPosicion = function () {
+    var form = this;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      form.posicion = position.coords.latitude + " / " + position.coords.longitude
+    });
+  }
 })
