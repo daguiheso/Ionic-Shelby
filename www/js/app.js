@@ -120,6 +120,7 @@ angular.module('starter', ['ionic'])
 .controller('UserCtrl', ['$scope', '$http', '$state', function($scope, $http, $state) {
   $http.get('js/data.json')
     .success(function(data){
+      $scope.data = data.usuarios[$state.params.id];
     });
 }])
 .controller('DatosCtrl', function($scope) {
