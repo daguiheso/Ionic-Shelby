@@ -61,7 +61,7 @@ angular.module('starter', ['ionic'])
       }
     })
     .state('tab.user', {
-      url: '/user',
+      url: '/user/:id',
       views: {
         'tab-user': {
           templateUrl: 'templates/user.html',
